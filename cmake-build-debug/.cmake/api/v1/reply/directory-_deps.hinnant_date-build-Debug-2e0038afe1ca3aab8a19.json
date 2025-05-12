@@ -1,0 +1,84 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"cmake-build-debug/_deps/hinnant_date-src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 171,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 196,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 200,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "include/date",
+			"paths" : 
+			[
+				"cmake-build-debug/_deps/hinnant_date-src/include/date/date.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/date",
+			"exportName" : "dateConfig",
+			"exportTargets" : 
+			[
+				{
+					"id" : "date::@f2408224f59ddd67514a",
+					"index" : 0
+				}
+			],
+			"paths" : 
+			[
+				"_deps/hinnant_date-build/CMakeFiles/Export/a52b05f964b070ee926bcad51d3288af/dateTargets.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/date",
+			"paths" : 
+			[
+				"cmake-build-debug/_deps/hinnant_date-src/cmake/dateConfig.cmake",
+				"cmake-build-debug/_deps/hinnant_date-build/dateConfigVersion.cmake"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "_deps/hinnant_date-build",
+		"source" : "cmake-build-debug/_deps/hinnant_date-src"
+	}
+}
