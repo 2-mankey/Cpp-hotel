@@ -92,6 +92,7 @@ Cpp_Lessons_EXTERNAL_OBJECTS =
 
 Cpp_Lessons: CMakeFiles/Cpp_Lessons.dir/main.cpp.o
 Cpp_Lessons: CMakeFiles/Cpp_Lessons.dir/build.make
+Cpp_Lessons: _deps/inih-src/ini.c
 Cpp_Lessons: CMakeFiles/Cpp_Lessons.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/k/Cpp_Lessons/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Cpp_Lessons"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Cpp_Lessons.dir/link.txt --verbose=$(VERBOSE)

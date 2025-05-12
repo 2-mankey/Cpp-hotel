@@ -9,6 +9,10 @@
 #include "httplib.h"
 #include <nlohmann/json.hpp>
 #include <date/date.h>
+#include <fstream>
+#include "ini.h"
+
+
 
 using namespace std;
 using namespace std::chrono;
@@ -18,6 +22,42 @@ using namespace date;
 // --------------------------
 // Базовые модели данных
 // --------------------------
+
+// Структура для хранения настроек
+struct ServerConfig {
+    string host = "0.0.0.0";
+    int port = 8080;
+    bool debug = false;
+};
+
+int config_handler(void* user, const char* section, const char* name, const char* value) {
+    ServerConfig* config = static_cast<ServerConfig*>(user);
+
+    if (strcmp(name, "host") == 0) {
+        config->host = value;
+    } else if (strcmp(name, "port") == 0) {
+        config->port = atoi(value);
+    } else if (strcmp(name, "debug") == 0) {
+        config->debug = (strcmp(value, "true") == 0);
+    }
+    return 1;
+}
+
+ServerConfig load_config(const string& filename) {
+    ServerConfig config;
+    // Путь относительно корня проекта
+    string full_path = "../" + filename;
+    ifstream file(full_path);
+
+    if (file.good()) {
+        ini_parse(full_path.c_str(), config_handler, &config);
+    } else {
+        cerr << "Config file " << full_path << " not found, using defaults." << endl;
+    }
+
+    return config;
+}
+
 
 struct Guest {
     int id;
@@ -203,9 +243,13 @@ int main() {
     HotelManager manager;
     httplib::Server svr;
 
+    // Загрузка конфигурации
+    ServerConfig config = load_config("settings.ini");
+
     // Инициализация тестовых данных
     manager.add_room("standard", 100.0, 2);
     manager.add_room("deluxe", 200.0, 4);
+
 
     // API Endpoints
     svr.Post("/guests", [&](const httplib::Request& req, httplib::Response& res) {
@@ -302,8 +346,9 @@ int main() {
     int port = 8080;
     string host = "0.0.0.0";
 
-    cout << "Starting server at " << host << ":" << port << endl;
-    svr.listen(host.c_str(), port);
+    cout << "Starting server at " << config.host << ":" << config.port << endl;
+    svr.listen(config.host.c_str(), config.port);
 
     return 0;
+
 }

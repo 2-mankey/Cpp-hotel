@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/k/Cpp_Lessons/_deps/cpp-httplib-src -I/home/k/Cpp_Lessons/_deps/nlohmann_json-src/include -I/home/k/Cpp_Lessons/_deps/hinnant_date-src/include
+CXX_INCLUDES = -I/home/k/Cpp_Lessons/_deps/cpp-httplib-src -I/home/k/Cpp_Lessons/_deps/nlohmann_json-src/include -I/home/k/Cpp_Lessons/_deps/hinnant_date-src/include -I/home/k/Cpp_Lessons/_deps/inih-src
 
 CXX_FLAGS = -std=gnu++20
 

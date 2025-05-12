@@ -327,6 +327,10 @@ FETCHCONTENT_SOURCE_DIR_CPP-HTTPLIB:PATH=
 FETCHCONTENT_SOURCE_DIR_HINNANT_DATE:PATH=
 
 //When not empty, overrides where to find pre-populated content
+// for inih
+FETCHCONTENT_SOURCE_DIR_INIH:PATH=
+
+//When not empty, overrides where to find pre-populated content
 // for nlohmann_json
 FETCHCONTENT_SOURCE_DIR_NLOHMANN_JSON:PATH=
 
@@ -338,6 +342,9 @@ FETCHCONTENT_UPDATES_DISCONNECTED_CPP-HTTPLIB:BOOL=OFF
 
 //Enables UPDATE_DISCONNECTED behavior just for population of hinnant_date
 FETCHCONTENT_UPDATES_DISCONNECTED_HINNANT_DATE:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of inih
+FETCHCONTENT_UPDATES_DISCONNECTED_INIH:BOOL=OFF
 
 //Enables UPDATE_DISCONNECTED behavior just for population of nlohmann_json
 FETCHCONTENT_UPDATES_DISCONNECTED_NLOHMANN_JSON:BOOL=OFF

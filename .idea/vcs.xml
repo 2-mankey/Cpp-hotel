@@ -4,6 +4,7 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/_deps/cpp-httplib-src" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/_deps/hinnant_date-src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/_deps/inih-src" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/_deps/nlohmann_json-src" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/build/_deps/cpp-httplib-src" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/build/_deps/hinnant_date-src" vcs="Git" />
